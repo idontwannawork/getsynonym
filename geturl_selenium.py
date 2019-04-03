@@ -21,7 +21,7 @@ class UrlList:
         first = driver.page_source
 
         # 上限10回とし最後までスクロールしてページを取得する
-        for i in range(10):
+        for _ in range(10):
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
             time.sleep(3)
             next = driver.page_source
