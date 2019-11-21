@@ -3,6 +3,7 @@ from urllib.parse import quote_plus
 from urllib.error import URLError, HTTPError
 from bs4 import BeautifulSoup
 
+
 class Synonym:
 
     def getSy(self, word, target_url, css_selector):
@@ -22,7 +23,8 @@ class Synonym:
             print(e.reason)
         except URLError as e:
             print(e.reason)
-            
+
+
 sy = Synonym()
 
 # 検索したい文字列
@@ -33,4 +35,4 @@ target = "https://renso-ruigo.com/word/"
 selector = "#content > div.word_t_field > div"
 
 for item in list:
-    print(sy.getSy(item,target,selector))
+    print(sy.getSy(item, target, selector))
